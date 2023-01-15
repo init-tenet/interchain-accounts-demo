@@ -100,6 +100,8 @@ import (
 	intertx "github.com/cosmos/interchain-accounts/x/inter-tx"
 	intertxkeeper "github.com/cosmos/interchain-accounts/x/inter-tx/keeper"
 	intertxtypes "github.com/cosmos/interchain-accounts/x/inter-tx/types"
+
+	wasm "github.com/CosmWasm/wasmd/x/wasm"
 )
 
 const Name = "ica"
@@ -149,6 +151,7 @@ var (
 		vesting.AppModuleBasic{},
 		ica.AppModuleBasic{},
 		intertx.AppModuleBasic{},
+		wasm.AppModuleBasic{},
 	// this line is used by starport scaffolding # stargate/app/moduleBasic
 	)
 
